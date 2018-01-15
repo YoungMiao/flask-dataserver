@@ -57,10 +57,6 @@ def info():
 
     return resposedata.replace("\'","\"")
 
-# 用户名输入为空
-    if user_name is None:
-        raise CustomFlaskErr(USER_NAME_ILLEGAL, status_code=400)
-
 @app.errorhandler(CustomFlaskErr)
 def handle_flask_error(error):
 
